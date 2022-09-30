@@ -23,7 +23,7 @@ public class Osterformel {
         }
         else {
             System.out.println("Ostersonntag ist der " + P + 31 +
-                    ". April");
+                    ". März");
         }
     }
 }
