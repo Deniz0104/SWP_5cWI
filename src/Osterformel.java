@@ -17,7 +17,13 @@ public class Osterformel {
 
         int P = 25-m-w;
 
-        System.out.println("Ostersonntag ist der " + P +
-                ". April");
+        if (P<0) {
+            System.out.println("Ostersonntag ist der " + P +
+                    ". April");
+        }
+        else {
+            System.out.println("Ostersonntag ist der " + P + 31 +
+                    ". April");
+        }
     }
 }
