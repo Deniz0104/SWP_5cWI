@@ -1,3 +1,5 @@
+package Einstieg;
+
 import java.util.Scanner;
 
 public class Addieren {
