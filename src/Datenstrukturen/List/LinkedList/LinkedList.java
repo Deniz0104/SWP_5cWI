@@ -7,7 +7,7 @@ public class LinkedList implements HTLList {
     private Node root;
 
     @Override
-    public void add(int value) {
+    public void addElement(int value) {
         Node n = new Node(value);
         if (root == null) {
             root = n;
@@ -22,12 +22,17 @@ public class LinkedList implements HTLList {
 
     @Override
     public int get(int index) {
+        Node actualNode = root;
+        int length = 0;
         return 0;
     }
 
     @Override
-    public void remove(int index) {
+    public void removeElement(int index) {
+        Node actualNode = root;
+        for (int i = 0; i > index-1 ; i++) {
 
+        }
     }
 
     @Override
