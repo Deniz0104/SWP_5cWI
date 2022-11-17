@@ -1,6 +1,7 @@
 package Datenstrukturen.LinkedList;
 
 import Datenstrukturen.HTLList;
+import Datenstrukturen.Node;
 
 
 public class LinkedList implements HTLList {
@@ -42,18 +43,15 @@ public class LinkedList implements HTLList {
         if (root == null) {
             return;
         }
-        if (index == 0) {
-            root = actualNode.getNext();
-            return;
-        }
         int counter = 0;
-        while (actualNode.getNext()!=null) {
+        while (actualNode.getNext() != null) {
             if (counter == index) {
-                actualNode.setValue(actualNode.getNext().getValue());
-                actualNode = actualNode.getNext();
+                    actualNode.setValue(actualNode.getNext().getValue());
+                    actualNode = actualNode.getNext();
             }
             else {
                 counter++;
+                actualNode = actualNode.getNext();
             }
         }
     }
@@ -66,10 +64,13 @@ public class LinkedList implements HTLList {
             return;
         }
         System.out.println("Linked list Nodes Output: ");
-        while(actual != null) {
+        System.out.print("( ");
+        while(actual.getNext() != null) {
             System.out.print(actual.getValue() + " ");
             actual = actual.getNext();
+
         }
+        System.out.print(")");
         System.out.println();
     }
 }
