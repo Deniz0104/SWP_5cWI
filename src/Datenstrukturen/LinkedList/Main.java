@@ -1,4 +1,4 @@
-package Datenstrukturen.List.LinkedList;
+package Datenstrukturen.LinkedList;
 
 public class Main {
 
@@ -7,10 +7,13 @@ public class Main {
         ll.addElement(5);
         ll.addElement(12);
         ll.addElement(22);
+        ll.addElement(24);
+        ll.addElement(44);
         System.out.println("Hello World");
-        ll.display();
 
-        System.out.println(ll.get(1));
+        ll.removeElement(3);
+        ll.display();
+        System.out.println(ll.get(0));
     }
 
 }

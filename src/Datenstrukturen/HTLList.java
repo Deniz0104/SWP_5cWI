@@ -1,4 +1,4 @@
-package Datenstrukturen.List;
+package Datenstrukturen;
 
 public interface HTLList {
     public void addElement(int value);

@@ -1,6 +1,6 @@
-package Datenstrukturen.List.LinkedList;
+package Datenstrukturen.LinkedList;
 
-import Datenstrukturen.List.HTLList;
+import Datenstrukturen.HTLList;
 
 
 public class LinkedList implements HTLList {
@@ -22,16 +22,39 @@ public class LinkedList implements HTLList {
 
     @Override
     public int get(int index) {
-        Node actualNode = root;
-        int length = 0;
-        return 0;
+        Node currentNode = root;
+        int counter = 0;
+
+        while (currentNode!=null) {
+            if (counter == index) {
+                return currentNode.getValue();
+            }
+            counter++;
+            currentNode = currentNode.getNext();
+        }
+        assert false;
+        return currentNode.getValue();
     }
 
     @Override
     public void removeElement(int index) {
         Node actualNode = root;
-        for (int i = 0; i > index-1 ; i++) {
-
+        if (root == null) {
+            return;
+        }
+        if (index == 0) {
+            root = actualNode.getNext();
+            return;
+        }
+        int counter = 0;
+        while (actualNode.getNext()!=null) {
+            if (counter == index) {
+                actualNode.setValue(actualNode.getNext().getValue());
+                actualNode = actualNode.getNext();
+            }
+            else {
+                counter++;
+            }
         }
     }
 
