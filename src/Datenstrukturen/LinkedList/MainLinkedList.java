@@ -10,7 +10,7 @@ public class MainLinkedList {
         ll.addElement(24);
         ll.addElement(44);
 
-        ll.removeElement(4);
+        ll.removeElement(0);
         ll.display();
         System.out.println(ll.get(1));
     }

@@ -43,6 +43,10 @@ public class LinkedList implements HTLList {
         if (root == null) {
             return;
         }
+        else if (index == 0) {
+            root = root.getNext();
+            return;
+        }
         int counter = 0;
         while (actualNode.getNext() != null) {
             if (counter == index) {
@@ -70,7 +74,7 @@ public class LinkedList implements HTLList {
             actual = actual.getNext();
 
         }
-        System.out.print(")");
+        System.out.print(actual.getValue() + " )");
         System.out.println();
     }
 }
